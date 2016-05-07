@@ -1,7 +1,7 @@
 [<img src="https://cdn.rawgit.com/lutsen/lagan/master/lagan-logo.svg" width="100" alt="Lagan">](https://github.com/lutsen/lagan)
 
-Lagan Position Property
-=======================
+Lagan Position Property Controller
+==================================
 
 Controller for the Lagan Position property.
 

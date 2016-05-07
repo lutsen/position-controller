@@ -1,5 +1,5 @@
 {
-	"name": "lagan/position",
+	"name": "lagan/position-property-controller",
 	"type": "library",
 	"description": "Controller for the Lagan position property.",
 	"keywords": ["lagan","position","property","controller"],
@@ -11,5 +11,8 @@
 			"homepage": "http://www.hoverkraft.nl",
 			"role": "Developer"
 		}
-	]
+	],
+	"require": {
+		"php": ">=5.5.0"
+	}
 }
