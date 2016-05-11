@@ -1,5 +1,5 @@
 {
-	"name": "lagan/position-property-controller",
+	"name": "lagan/property-position",
 	"type": "library",
 	"description": "Controller for the Lagan position property.",
 	"keywords": ["lagan","position","property","controller"],
@@ -17,7 +17,7 @@
 	},
     "autoload": {
         "psr-4": {
-            "Lagan\\Property\\": "/"
+            "Lagan\\Property\\": "src/"
         }
     }
 }
