@@ -24,6 +24,8 @@ class Position {
 	 */
 	public function set($bean, $property, $new_value) {
 
+		$new_value = intval($new_value); // Convert to integer
+
 		$all = \R::findAll( $bean->getMeta('type') );
 		$count_all = \R::count( $bean->getMeta('type') );
 		$curr_value = $bean->{ $property['name'] };
