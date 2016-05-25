@@ -24,14 +24,16 @@ class Position {
 	 */
 	public function set($bean, $property, $new_value) {
 
-		$new_value = intval($new_value); // Convert to integer
+		if ( !empty($new_value) || $new_value === 0 || $new_value === '0' ) {
+			$new_value = intval( $new_value ); // Convert to integer
+		}
 
 		$all = \R::findAll( $bean->getMeta('type') );
 		$count_all = \R::count( $bean->getMeta('type') );
 		$curr_value = $bean->{ $property['name'] };
 		
 		// New bean
-		if ( empty($curr_value) && $curr_value !== '0' ) {
+		if ( empty($curr_value) && $curr_value !== 0 && $curr_value !== '0' ) {
 		
 			// Position at the bottom
 			$curr_value = $count_all;
@@ -39,7 +41,7 @@ class Position {
 		}
 		
 		// No new input
-		if ( ( empty($new_value) && $new_value !== '0' ) || $new_value == $curr_value ) {
+		if ( ( empty($new_value) && $new_value !== 0 ) || $new_value == $curr_value ) {
 		
 			return $curr_value;
 		
@@ -47,7 +49,6 @@ class Position {
 		
 			if ( $new_value < 0 ) $new_value = 0;
 			if ( $new_value > $count_all - 1 ) $new_value = $count_all - 1;
-			//if ( $curr_value !== $count_all && $new_value > $count_all - 1 ) $new_value = $count_all - 1;
 			if ( $new_value < $curr_value ) {
 				foreach ( $all as $b ) {
 					if ($b->{ $property['name'] } >= $new_value AND $b->{ $property['name'] } < $curr_value) {
