@@ -47,8 +47,8 @@ class Position {
 		
 		} else {
 		
-			if ( $new_value < 0 ) $new_value = 0;
 			if ( $new_value > $count_all - 1 ) $new_value = $count_all - 1;
+			if ( $new_value < 0 ) $new_value = 0;
 			if ( $new_value < $curr_value ) {
 				foreach ( $all as $b ) {
 					if ($b->{ $property['name'] } >= $new_value AND $b->{ $property['name'] } < $curr_value) {
