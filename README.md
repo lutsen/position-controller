@@ -11,4 +11,4 @@ To be used with [Lagan](https://github.com/lutsen/lagan). Lagan lets you create 
 
 The position property as an optional *manytoone* key in the property array. With this key, you can set the position relative to the opject the current object has a many-to-one relation with, like this: `'manytoone' => 'page'`
 
-Lagan is a project of [Lútsen Stellingwerff](http://lutsen.land/) from [HoverKraft](http://www.hoverkraft.nl/).
+Lagan is a project of [Lútsen Stellingwerff](http://lutsen.net/).
